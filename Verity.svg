@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#241f00"/>
+      <stop offset="55%" stop-color="#100d00"/>
+      <stop offset="100%" stop-color="#060605"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.4"/>
+      <stop offset="55%" stop-color="#FFD700" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="38%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="30%" stop-color="#FFD700"/>
+      <stop offset="68%" stop-color="#C79A00"/>
+      <stop offset="100%" stop-color="#6B4F00"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bg)"/>
+
+  <!-- Аура вокруг существа -->
+  <circle cx="250" cy="255" r="200" fill="url(#aura)" filter="url(#glow)"/>
+
+  <!-- Звёзды-искры -->
+  <g fill="#FFD700" opacity="0.5">
+    <circle cx="78" cy="120" r="2.5"/>
+    <circle cx="120" cy="360" r="2"/>
+    <circle cx="420" cy="105" r="2.5"/>
+    <circle cx="388" cy="330" r="2"/>
+    <circle cx="60" cy="240" r="1.8"/>
+  </g>
+
+  <!-- Магическое кольцо -->
+  <circle cx="250" cy="255" r="168" fill="none" stroke="#FFD700" stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="3 10"/>
+  <circle cx="250" cy="255" r="182" fill="none" stroke="#FFD700" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Тело -->
+  <circle cx="250" cy="260" r="120" fill="url(#body)"/>
+
+  <!-- Блик -->
+  <ellipse cx="212" cy="205" rx="44" ry="24" fill="#ffffff" opacity="0.4" transform="rotate(-28 212 205)"/>
+
+  <!-- Глаза -->
+  <g>
+    <circle cx="207" cy="258" r="15" fill="#241d00"/>
+    <circle cx="293" cy="258" r="15" fill="#241d00"/>
+    <circle cx="212" cy="253" r="5" fill="#ffffff"/>
+    <circle cx="298" cy="253" r="5" fill="#ffffff"/>
+  </g>
+
+  <!-- Широкая улыбка -->
+  <path d="M 198 297 Q 250 340 302 297" fill="none" stroke="#241d00" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Щёчки -->
+  <circle cx="178" cy="295" r="12" fill="#FF9D00" opacity="0.55"/>
+  <circle cx="322" cy="295" r="12" fill="#FF9D00" opacity="0.55"/>
+</svg>
