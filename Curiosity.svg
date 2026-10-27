@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#06240e"/>
+      <stop offset="55%" stop-color="#020f05"/>
+      <stop offset="100%" stop-color="#050605"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00CC44" stop-opacity="0.36"/>
+      <stop offset="55%" stop-color="#00CC44" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#00CC44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="38%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#A8FFC4"/>
+      <stop offset="30%" stop-color="#00CC44"/>
+      <stop offset="68%" stop-color="#008C2E"/>
+      <stop offset="100%" stop-color="#004718"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bg)"/>
+
+  <!-- Аура вокруг существа -->
+  <circle cx="250" cy="255" r="200" fill="url(#aura)" filter="url(#glow)"/>
+
+  <!-- Искры-вопрос -->
+  <g fill="#4DDB7A" opacity="0.5">
+    <circle cx="78" cy="120" r="2.5"/>
+    <circle cx="120" cy="360" r="2"/>
+    <circle cx="420" cy="105" r="2.5"/>
+    <circle cx="60" cy="240" r="1.8"/>
+  </g>
+
+  <!-- Магическое кольцо -->
+  <circle cx="250" cy="255" r="168" fill="none" stroke="#00CC44" stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="3 10"/>
+  <circle cx="250" cy="255" r="182" fill="none" stroke="#00CC44" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Тело -->
+  <circle cx="250" cy="260" r="120" fill="url(#body)"/>
+
+  <!-- Блик -->
+  <ellipse cx="212" cy="205" rx="44" ry="24" fill="#ffffff" opacity="0.32" transform="rotate(-28 212 205)"/>
+
+  <!-- Брови: левая приподнята, правая обычная -->
+  <path d="M 186 228 Q 208 218 228 226" fill="none" stroke="#00240c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 272 236 Q 293 228 312 234" fill="none" stroke="#00240c" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Глаза: левый широко открыт, правый прищурен -->
+  <circle cx="207" cy="256" r="15" fill="#00240c"/>
+  <path d="M 282 258 Q 293 250 304 258 Q 293 266 282 258 Z" fill="#00240c"/>
+  <!-- Блики -->
+  <circle cx="212" cy="251" r="4.5" fill="#ffffff"/>
+  <circle cx="288" cy="254" r="3" fill="#ffffff"/>
+
+  <!-- Скептическая полуулыбка, смещённая вправо -->
+  <path d="M 225 306 Q 258 318 300 302" fill="none" stroke="#00240c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 300 302 L 314 296" stroke="#00240c" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Знак вопроса над головой -->
+  <g fill="#4DDB7A" opacity="0.85">
+    <path d="M 396 128 Q 396 118 388 118 Q 380 118 380 128 Q 380 133 385 136 L 385 146 Q 385 150 389 150 Q 393 150 393 146 L 393 139 Q 399 135 399 128 Z"/>
+    <circle cx="389" cy="160" r="3.5"/>
+  </g>
+</svg>

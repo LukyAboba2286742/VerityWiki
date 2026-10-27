@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#2e0a16"/>
+      <stop offset="55%" stop-color="#16030a"/>
+      <stop offset="100%" stop-color="#060505"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF99BB" stop-opacity="0.38"/>
+      <stop offset="55%" stop-color="#FF99BB" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FF99BB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="38%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#FFD9E6"/>
+      <stop offset="30%" stop-color="#FF99BB"/>
+      <stop offset="68%" stop-color="#D9668F"/>
+      <stop offset="100%" stop-color="#8A3358"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bg)"/>
+
+  <!-- Аура вокруг существа -->
+  <circle cx="250" cy="255" r="200" fill="url(#aura)" filter="url(#glow)"/>
+
+  <!-- Сердечки-искры -->
+  <g fill="#FF99BB" opacity="0.55">
+    <path d="M 78 108 C 78 102 85 99 88 104 C 91 99 98 102 98 108 C 98 116 88 122 88 122 C 88 122 78 116 78 108 Z"/>
+    <path d="M 118 352 C 118 347 124 345 126 349 C 129 345 135 347 135 352 C 135 358 126 363 126 363 C 126 363 118 358 118 352 Z"/>
+    <circle cx="60" cy="236" r="1.8"/>
+  </g>
+
+  <!-- Магическое кольцо -->
+  <circle cx="250" cy="255" r="168" fill="none" stroke="#FF99BB" stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="3 10"/>
+  <circle cx="250" cy="255" r="182" fill="none" stroke="#FF99BB" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Тело -->
+  <circle cx="250" cy="260" r="120" fill="url(#body)"/>
+
+  <!-- Блик -->
+  <ellipse cx="212" cy="205" rx="44" ry="24" fill="#ffffff" opacity="0.38" transform="rotate(-28 212 205)"/>
+
+  <!-- Глаза-сердечки -->
+  <g fill="#5c0f2a">
+    <path d="M 207 266 C 207 260 201 257 200 262 C 199 257 193 260 193 266 C 193 274 200 280 200 280 C 200 280 207 274 207 266 Z"/>
+    <path d="M 307 266 C 307 260 301 257 300 262 C 299 257 293 260 293 266 C 293 274 300 280 300 280 C 300 280 307 274 307 266 Z"/>
+  </g>
+
+  <!-- Румянец -->
+  <circle cx="176" cy="296" r="14" fill="#FF5C8A" opacity="0.6"/>
+  <circle cx="324" cy="296" r="14" fill="#FF5C8A" opacity="0.6"/>
+
+  <!-- Улыбка-сердечко -->
+  <path d="M 250 318 C 250 312 243 309 242 314 C 241 309 234 312 234 318 C 234 325 242 330 242 330 C 242 330 250 325 250 318 Z" fill="#5c0f2a"/>
+</svg>

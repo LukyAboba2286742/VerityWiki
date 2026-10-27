@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#120b1e"/>
+      <stop offset="55%" stop-color="#07040d"/>
+      <stop offset="100%" stop-color="#040405"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8A6CFF" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#8A6CFF" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#8A6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="38%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#4a4a4a"/>
+      <stop offset="30%" stop-color="#222222"/>
+      <stop offset="68%" stop-color="#0e0e0e"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9B8FF"/>
+      <stop offset="100%" stop-color="#6E45E8"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="eyeBlur" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bg)"/>
+
+  <!-- Аура вокруг существа -->
+  <circle cx="250" cy="255" r="200" fill="url(#aura)" filter="url(#glow)"/>
+
+  <!-- Тёмные искры -->
+  <g fill="#8A6CFF" opacity="0.45">
+    <circle cx="78" cy="120" r="2.5"/>
+    <circle cx="120" cy="360" r="2"/>
+    <circle cx="420" cy="105" r="2.5"/>
+    <circle cx="388" cy="330" r="2"/>
+    <circle cx="60" cy="240" r="1.8"/>
+  </g>
+
+  <!-- Магическое кольцо -->
+  <circle cx="250" cy="255" r="168" fill="none" stroke="#8A6CFF" stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="3 10"/>
+  <circle cx="250" cy="255" r="182" fill="none" stroke="#8A6CFF" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Тело -->
+  <circle cx="250" cy="260" r="120" fill="url(#body)"/>
+
+  <!-- Тонкая светлая окантовка сферы -->
+  <circle cx="250" cy="260" r="119" fill="none" stroke="#8A6CFF" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- Свечение глаз -->
+  <circle cx="205" cy="255" r="20" fill="#8A6CFF" opacity="0.5" filter="url(#eyeBlur)"/>
+  <circle cx="295" cy="255" r="20" fill="#8A6CFF" opacity="0.5" filter="url(#eyeBlur)"/>
+
+  <!-- Сияющие глаза -->
+  <circle cx="205" cy="255" r="12" fill="url(#eyeGlow)"/>
+  <circle cx="295" cy="255" r="12" fill="url(#eyeGlow)"/>
+  <circle cx="208" cy="251" r="3.5" fill="#ffffff"/>
+  <circle cx="298" cy="251" r="3.5" fill="#ffffff"/>
+
+  <!-- Зубастая пасть -->
+  <path d="M 196 300 Q 250 328 304 298 L 304 312 Q 250 342 196 314 Z" fill="#05010f"/>
+  <!-- Зубы верхние -->
+  <path d="M 205 303 L 208 312 L 215 305 Z M 222 307 L 225 317 L 232 309 Z M 240 311 L 243 321 L 250 313 Z M 258 313 L 261 322 L 268 314 Z M 276 310 L 279 319 L 286 308 Z M 293 304 L 296 312 L 301 303 Z" fill="#E8E4FF"/>
+  <!-- Зубы нижние -->
+  <path d="M 215 323 L 218 314 L 225 321 Z M 233 326 L 236 317 L 243 324 Z M 251 329 L 254 320 L 261 326 Z M 269 327 L 272 318 L 279 323 Z M 287 322 L 290 314 L 297 319 Z" fill="#E8E4FF"/>
+</svg>
