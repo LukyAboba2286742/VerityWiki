@@ -1,0 +1,1015 @@
+ <!DOCTYPE html>
+
+<html lang="ru" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ВЕРИТИПЕДИА — Энциклопедия мистических существ</title>
+
+    <!-- Шрифты Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: {
+
+                        cinzel: ['Cinzel', 'serif'],
+
+                        inter: ['Inter', 'sans-serif'],
+
+                    },
+
+                    colors: {
+
+                        verity: '#FFD700',
+
+                        falsity: '#0055FF',
+
+                        lovity: '#FF99BB',
+
+                        cruelty: '#FF2222',
+
+                        negativity: '#222222',
+
+                        curiosity: '#00CC44',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        body {
+
+            background-color: #050505;
+
+            color: #e5e5e5;
+
+            font-family: 'Inter', sans-serif;
+
+            overflow-x: hidden;
+
+        }
+
+        .mystic-glow {
+
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+
+        }
+
+        /* Эффект появления при скролле */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+        }
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+        /* Кастомный скроллбар */
+
+        ::-webkit-scrollbar {
+
+            width: 8px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background: #0a0a0a;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #222;
+
+            border-radius: 4px;
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+
+            background: #444;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-[#050505] text-gray-200 antialiased selection:bg-yellow-500 selection:text-black">
+
+
+    <!-- Фоновый мистический шум/градиент -->
+
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]"></div>
+
+
+    <!-- Шапка / Навигация -->
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <a href="#hero" class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-white hover:text-yellow-400 transition-colors">
+
+                VERITY<span class="text-yellow-400">PEDIA</span>
+
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-wider text-gray-400">
+
+                <a href="#catalog" class="hover:text-white transition-colors">Виды</a>
+
+                <a href="#about" class="hover:text-white transition-colors">О феномене</a>
+
+                <a href="#contacts" class="hover:text-white transition-colors">Контакты</a>
+
+            </nav>
+
+            <div class="flex items-center gap-3">
+
+                <div class="flex items-center gap-1.5 text-xs font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full" title="Виды в избранном">
+
+                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+
+                    <span id="favCount">0</span>
+
+                </div>
+
+                <div class="text-xs font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full">
+
+                    ARCV-2026.SYS
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Главный раздел -->
+
+    <section id="hero" class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-4 pt-12 pb-20 z-10">
+
+        <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-10 pointer-events-none">
+
+            <div class="w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full bg-yellow-500 blur-[140px]"></div>
+
+        </div>
+
+
+        <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-400 text-xs sm:text-sm tracking-widest uppercase font-mono reveal">
+
+            Энциклопедия аномальных сущностей • Релиз 2026
+
+        </div>
+
+
+        <!-- Картинка Верити рядом с названием -->
+
+        <div class="w-24 h-24 sm:w-32 sm:h-32 mb-6 rounded-full overflow-hidden border-2 border-yellow-500/50 shadow-[0_0_25px_rgba(255,215,0,0.3)] reveal">
+
+            <img src="Verity.webp" alt="Верити" class="w-full h-full object-cover">
+
+        </div>
+
+
+        <h1 class="font-cinzel text-5xl sm:text-7xl md:text-8xl font-black tracking-wider text-white mb-6 mystic-glow reveal">
+
+            ВЕРИТИПЕДИА
+
+        </h1>
+
+
+        <p class="max-w-2xl text-base sm:text-lg text-gray-400 font-light leading-relaxed mb-10 reveal">
+
+            Древний цифровой фолиант, классифицирующий загадочных сферических существ. Желтые шарики с улыбкой и их извращенные зеркальные отражения, заполонившие реальность в 2026 году.
+
+        </p>
+
+
+        <div class="reveal">
+
+            <a href="#catalog" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold tracking-wider hover:bg-yellow-400 transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+
+                Исследовать каталог
+
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Каталог видов (Блоки) -->
+
+    <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 z-10 relative">
+
+        <div class="text-center mb-16 reveal">
+
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mb-4">Классификация видов</h2>
+
+            <div class="w-16 h-0.5 bg-yellow-500 mx-auto"></div>
+
+            <p class="text-gray-400 text-sm mt-3">Выберите вид для детального изучения анатомии и поведенческих паттернов</p>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+            <!-- 1. Верити (Желтый) -->
+
+            <div onclick="openModal('verity')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-400 transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(255,215,0,0.05)] hover:shadow-[0_0_30px_rgba(255,215,0,0.2)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-yellow-500/40 group-hover:scale-105 group-hover:border-yellow-400 transition-all duration-500 shadow-lg">
+
+                        <img src="Verity.webp" alt="Верити" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-yellow-400 mb-1 uppercase">Базовый вид #01</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Верити</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Архетипичный желтый шарик с неизменной широкой улыбкой. Источник абсолютного позитива и базовая единица мем-реальности 2026 года.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-yellow-400 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2. Фолсити (Синий) -->
+
+            <div onclick="openModal('falsity')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400 transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(0,85,255,0.05)] hover:shadow-[0_0_30px_rgba(0,85,255,0.2)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-blue-500/40 group-hover:scale-105 group-hover:border-blue-400 transition-all duration-500 shadow-lg">
+
+                        <img src="Falsity.webp" alt="Фолсити" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-blue-400 mb-1 uppercase">Аномалия #02</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Фолсити</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Холодный синий двойник. Специализируется на искусственных иллюзиях, фальшивых обещаниях и глубокой цифровой меланхолии.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-blue-400 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3. Ловити (Розовый) -->
+
+            <div onclick="openModal('lovity')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-pink-400/20 hover:border-pink-400 transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(255,153,187,0.05)] hover:shadow-[0_0_30px_rgba(255,153,187,0.2)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-pink-400/40 group-hover:scale-105 group-hover:border-pink-400 transition-all duration-500 shadow-lg">
+
+                        <img src="Lovity.webp" alt="Ловити" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-pink-400 mb-1 uppercase">Мутация #03</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Ловити</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Нежный розовый вариант с прищуренными от умиления глазами. Излучает гипнотическую привязанность и токсичную заботу.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-pink-400 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4. Круэлти (Красный) -->
+
+            <div onclick="openModal('cruelty')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-red-500/20 hover:border-red-500 transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(255,34,34,0.05)] hover:shadow-[0_0_30px_rgba(255,34,34,0.2)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-red-500/40 group-hover:scale-105 group-hover:border-red-500 transition-all duration-500 shadow-lg">
+
+                        <img src="Cruelty.webp" alt="Круэлти" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-red-500 mb-1 uppercase">Хищник #04</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Круэлти</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Агрессивный красный антагонист с нахмуренными бровями и кривой ухмылкой. Воплощение ярости, сетевого хейта и хаоса.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-red-500 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5. Экслипсити (Черный) -->
+
+            <div onclick="openModal('eclipsity')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-neutral-700 hover:border-white transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-neutral-600 group-hover:scale-105 group-hover:border-white transition-all duration-500 shadow-lg">
+
+                        <img src="Eclipsity.webp" alt="Экслипсити" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-gray-400 mb-1 uppercase">Тень #05</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Экслипсити</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Мрачный черный шарик с сияющими глазами и зловещей зубастой пастью. Экслипсити поглощает позитивные комментарии и превращает радостные треды в экзистенциальную пустоту.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-gray-300 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. Кьюриосити (Зеленый) -->
+
+            <div onclick="openModal('curiosity')" class="group relative bg-neutral-950/80 rounded-2xl p-6 border border-green-500/20 hover:border-green-400 transition-all duration-500 cursor-pointer overflow-hidden reveal shadow-[0_0_15px_rgba(0,204,68,0.05)] hover:shadow-[0_0_30px_rgba(0,204,68,0.2)]">
+
+                <div class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mb-6 rounded-full overflow-hidden border-2 border-green-500/40 group-hover:scale-105 group-hover:border-green-400 transition-all duration-500 shadow-lg">
+
+                        <img src="Curiosity.webp" alt="Кьюриосити" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <span class="text-xs font-mono tracking-widest text-green-400 mb-1 uppercase">Исследователь #06</span>
+
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">Кьюриосити</h3>
+
+                    <p class="text-sm text-gray-400 line-clamp-3 group-hover:text-gray-200 transition-colors">
+
+                        Интеллектуальный зеленый вариант с приподнятой бровью. Вечно сомневающийся скептик, ищущий скрытые смыслы и заговор.
+
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2 text-xs text-green-400 font-semibold tracking-wider uppercase">
+
+                        <span>Открыть досье</span>
+
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Секция контекста -->
+
+    <section id="about" class="max-w-4xl mx-auto px-4 py-20 border-t border-white/10 reveal">
+
+        <h2 class="font-cinzel text-3xl font-bold text-white mb-6 text-center">О природе феномена</h2>
+
+        <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+
+            <p>
+
+                Согласно архивам Веритипедии, феномен зародился в начале 2026 года как вирусный визуальный мем, быстро эволюционировавший в самостоятельную цифровую мифологию. Каждый вид представляет собой эмоциональный спектр человечества, запечатанный в идеальной сферической форме.
+
+            </p>
+
+            <p>
+
+                Черный фон книги подчеркивает первозданную пустоту интернета, из которой рождаются эти сущности, а их разноцветное свечение служит сигналом опасности или притяжения для неосторожных пользователей сети.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Подвал (Footer) -->
+
+    <footer id="contacts" class="border-t border-white/10 bg-[#030303] text-gray-400 py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+                <!-- Блок 1: О нас -->
+
+                <div>
+
+                    <a href="#hero" class="font-cinzel text-xl font-bold tracking-widest text-white hover:text-yellow-400 transition-colors inline-block mb-4">
+
+                        VERITY<span class="text-yellow-400">PEDIA</span>
+
+                    </a>
+
+                    <p class="text-sm font-light text-gray-400 leading-relaxed mb-4">
+
+                        «Веритипедия» — независимый академический и цифровой проект 2026 года, посвященный каталогизации аномальных сферических сущностей и эмоциональных спектров новой сетевой реальности.
+
+                    </p>
+
+                    <div class="text-xs font-mono text-yellow-500/80">
+
+                        Статус проекта: Активный архив
+
+                    </div>
+
+                </div>
+
+
+                <!-- Блок 2: Навигация -->
+
+                <div>
+
+                    <h3 class="font-cinzel text-lg font-semibold text-white mb-4 uppercase tracking-wider">Разделы</h3>
+
+                    <ul class="space-y-2 text-sm font-light">
+
+                        <li><a href="#hero" class="hover:text-yellow-400 transition-colors">Главная страница</a></li>
+
+                        <li><a href="#catalog" class="hover:text-yellow-400 transition-colors">Каталог видов</a></li>
+
+                        <li><a href="#about" class="hover:text-yellow-400 transition-colors">О феномене</a></li>
+
+                        <li><a href="#contacts" class="hover:text-yellow-400 transition-colors">Контакты редакции</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Блок 3: Контакты -->
+
+                <div>
+
+                    <h3 class="font-cinzel text-lg font-semibold text-white mb-4 uppercase tracking-wider">Контакты</h3>
+
+                    <ul class="space-y-3 text-sm font-light">
+
+                        <li class="flex items-center gap-3">
+
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+
+                            <span>archive@veritypedia.sys</span>
+
+                        </li>
+
+                        <li class="flex items-center gap-3">
+
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+
+                            <span>Центральный сервер-хранилище, Сектор 2026</span>
+
+                        </li>
+
+                        <li class="flex items-center gap-3">
+
+                            <svg class="w-5 h-5 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <span>Патрулирование сети: Круглосуточно</span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Копирайт подвала -->
+
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-gray-600 gap-4">
+
+                <p>VERITYPEDIA PROJECT • 2026 EDITION. ALL RIGHTS RESERVED.</p>
+
+                <p>PROTECTED BY SECURE ENCRYPTION PROTOCOL</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Модальное окно (Wiki Страница Вида) -->
+
+    <div id="wikiModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300">
+
+        <div id="modalContent" class="relative w-full max-w-2xl bg-neutral-900 border border-white/20 rounded-3xl p-6 sm:p-10 max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 shadow-2xl">
+
+            <button onclick="closeModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+
+            </button>
+
+            <div id="modalBody">
+
+                <!-- Динамический контент заполняется скриптом -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Скрипты интерактивности -->
+
+    <script>
+
+        // База данных для модальных страниц видов
+
+        const speciesData = {
+
+            verity: {
+
+                title: "Верити",
+
+                subtitle: "Базовый архетип #01",
+
+                color: "#FFD700",
+
+                img: "Verity.webp",
+
+                danger: "Низкий",
+
+                origin: "Сетевой архив 2026",
+
+                desc: "Верити — прародитель всех сферических мемов. Его неизменная желтая улыбка символизирует наивный оптимизм эпохи раннего интернета. Существо безобидно до тех пор, пока пользователь не попытается поставить под сомнение его искренность.",
+
+                traits: ["Абсолютный позитив", "Сферическая геометрия", "Высокая вирусность"]
+
+            },
+
+            falsity: {
+
+                title: "Фолсити",
+
+                subtitle: "Аномалия #02",
+
+                color: "#0055FF",
+
+                img: "Falsity.webp",
+
+                danger: "Средний",
+
+                origin: "Зеркальные сервера",
+
+                desc: "Холодная синяя копия Верити. Фолсити питается дезинформацией и фальшивыми новостями. Приближение этого вида вызывает у пользователя чувство эстетического диссонанса и иллюзию контроля.",
+
+                traits: ["Цифровой обман", "Холодное синее свечение", "Глубокая меланхолия"]
+
+            },
+
+            lovity: {
+
+                title: "Ловити",
+
+                subtitle: "Мутация #03",
+
+                color: "#FF99BB",
+
+                img: "Lovity.webp",
+
+                danger: "Низкий (но навязчивый)",
+
+                origin: "Розовые чаты",
+
+                desc: "Ловити излучает волны гипертрофированной привязанности. Глаза-скобочки выдают постоянное состояние умиления. Опасность заключается в риске цифровой зависимости от постоянного одобрения.",
+
+                traits: ["Токсичная забота", "Гипнотический розовый тон", "Эмпатический резонанс"]
+
+            },
+
+            cruelty: {
+
+                title: "Круэлти",
+
+                subtitle: "Хищник #04",
+
+                color: "#FF2222",
+
+                img: "Cruelty.webp",
+
+                danger: "Экстремальный",
+
+                origin: "Токсичные комментарии",
+
+                desc: "Агрессивный красный хищник с нахмуренными бровями. Круэлти питается интернет-скандалами и хейтом. Любое взаимодействие с ним провоцирует резкий всплеск цифровой ярости.",
+
+                traits: ["Сетевая агрессия", "Красный спектр гнева", "Провокация конфликтов"]
+
+            },
+
+            eclipsity: {
+
+                title: "Экслипсити",
+
+                subtitle: "Тень #05",
+
+                color: "#FFFFFF",
+
+                img: "Eclipsity.webp",
+
+                danger: "Высокий",
+
+                origin: "Темная сеть",
+
+                desc: "Мрачный черный шарик с сияющими белыми глазами и огромной зубастой пастью. Экслипсити поглощает позитивные комментарии и превращает радостные треды в экзистенциальную пустоту.",
+
+                traits: ["Поглощение света", "Зубастая ухмылка", "Экзистенциальный ужас"]
+
+            },
+
+            curiosity: {
+
+                title: "Кьюриосити",
+
+                subtitle: "Исследователь #06",
+
+                color: "#00CC44",
+
+                img: "Curiosity.webp",
+
+                danger: "Умеренный",
+
+                origin: "Архивы конспирологов",
+
+                desc: "Зеленый скептик с приподнятой бровью. Кьюриосити никогда не верит на слово и постоянно ищет скрытый подтекст в коде страниц и постах пользователей.",
+
+                traits: ["Постоянный скепсис", "Зеленый цвет расследования", "Поиск заговоров"]
+
+            }
+
+        };
+
+
+        const modal = document.getElementById('wikiModal');
+
+        const modalContent = document.getElementById('modalContent');
+
+        const modalBody = document.getElementById('modalBody');
+
+
+        function openModal(id) {
+
+            const data = speciesData[id];
+
+            if (!data) return;
+
+
+            modalBody.innerHTML = `
+
+                <div class="flex flex-col sm:flex-row items-center gap-6 mb-8">
+
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 shadow-2xl flex-shrink-0" style="border-color: ${data.color}; box-shadow: 0 0 25px ${data.color}40;">
+
+                        <img src="${data.img}" alt="${data.title}" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <div>
+
+                        <span class="text-xs font-mono tracking-widest uppercase" style="color: ${data.color}">${data.subtitle}</span>
+
+                        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1 mb-2">${data.title}</h2>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Угроза: ${data.danger}</span>
+
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Происхождение: ${data.origin}</span>
+
+                        </div>
+
+                        ${renderFavoriteButton(id)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="space-y-6 text-gray-300 font-light leading-relaxed">
+
+                    <div>
+
+                        <h4 class="font-cinzel text-lg font-semibold text-white mb-2">Описание вида</h4>
+
+                        <p>${data.desc}</p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4 class="font-cinzel text-lg font-semibold text-white mb-2">Ключевые черты</h4>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            ${data.traits.map(t => `<span class="px-3 py-1 rounded-lg bg-neutral-800 text-xs text-gray-200 border border-white/5">${t}</span>`).join('')}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+
+            modalContent.classList.remove('scale-95');
+
+            document.body.style.overflow = 'hidden';
+
+        }
+
+
+        function closeModal() {
+
+            modal.classList.add('opacity-0', 'pointer-events-none');
+
+            modalContent.classList.add('scale-95');
+
+            document.body.style.overflow = 'auto';
+
+        }
+
+
+        modal.addEventListener('click', (e) => {
+
+            if (e.target === modal) closeModal();
+
+        });
+
+
+        // ===== ИЗБРАННОЕ (Favorites) =====
+
+        const FAVORITES_KEY = 'veritypedia_favorites';
+
+        function getFavorites() {
+
+            try {
+
+                const raw = localStorage.getItem(FAVORITES_KEY);
+
+                const list = raw ? JSON.parse(raw) : [];
+
+                return Array.isArray(list) ? list : [];
+
+            } catch (e) {
+
+                return [];
+
+            }
+
+        }
+
+        function saveFavorites(list) {
+
+            try {
+
+                localStorage.setItem(FAVORITES_KEY, JSON.stringify(list));
+
+            } catch (e) {
+
+                // localStorage недоступен — молча игнорируем
+
+            }
+
+        }
+
+        function isFavorite(id) {
+
+            return getFavorites().includes(id);
+
+        }
+
+        function renderFavoriteButton(id) {
+
+            if (isFavorite(id)) {
+
+                return `<button id="favBtn" onclick="toggleFavorite('${id}')" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-400/60 bg-yellow-500/15 text-yellow-400 text-sm font-semibold tracking-wider hover:bg-yellow-500/25 transition-colors">
+
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                    В избранном
+
+                </button>`;
+
+            }
+
+            return `<button id="favBtn" onclick="toggleFavorite('${id}')" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5 text-gray-300 text-sm font-semibold tracking-wider hover:border-yellow-400 hover:text-yellow-400 transition-colors">
+
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                В избранное
+
+            </button>`;
+
+        }
+
+        function toggleFavorite(id) {
+
+            const list = getFavorites();
+
+            const index = list.indexOf(id);
+
+            if (index === -1) {
+
+                list.push(id);
+
+            } else {
+
+                list.splice(index, 1);
+
+            }
+
+            saveFavorites(list);
+
+            updateFavoritesCounter();
+
+            const btn = document.getElementById('favBtn');
+
+            if (btn) btn.outerHTML = renderFavoriteButton(id);
+
+        }
+
+        function updateFavoritesCounter() {
+
+            const countEl = document.getElementById('favCount');
+
+            if (countEl) countEl.textContent = getFavorites().length;
+
+        }
+
+        updateFavoritesCounter();
+
+
+        // Анимация появления при прокрутке (Scroll Reveal)
+
+        const observerOptions = {
+
+            threshold: 0.1,
+
+            rootMargin: "0px 0px -50px 0px"
+
+        };
+
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('active');
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, observerOptions);
+
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    </script>
+
+</body>
+
+</html> 
